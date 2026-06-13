@@ -34,6 +34,9 @@ jobs:
     steps:
       - name: Checkout código fuente
         uses: actions/checkout@v4
+        with:
+          repository: julio2019vp/ec-maven-users-api-jvp
+          ref: main
 
       - name: Compilar con Maven (sin tests)
         run: mvn -B -DskipTests clean package
